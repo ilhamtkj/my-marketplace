@@ -1,0 +1,20 @@
+.warna {
+  color: blueviolet;
+}
+
+.warna-dua {
+  color: brown;
+}
+
+.carousel-item-home img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+.card-list {
+  transition: 0.3s;
+}
+
+.card-list:hover {
+  transform: scale(1.05);
+}
