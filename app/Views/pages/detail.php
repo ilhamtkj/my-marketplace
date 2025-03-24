@@ -57,6 +57,10 @@
                             <i class="bi bi-geo-alt"></i>
                             Lokasi Toko: Kab. Tegal
                         </p>
+                        <div class="col-lg-3">
+                            <button class="btn btn-primary d-block w-100">+ Keranjang</button>
+                            <a class="btn btn-outline-primary w-100 mt-2" href="">Beli</a>
+                        </div>
                     </div>
                 </div>
                 <!-- detail/description -->
