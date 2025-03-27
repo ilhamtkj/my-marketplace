@@ -20,7 +20,8 @@ setelah download selesai lalu masuk ke direktori project
 ### step 4
 
 setelah masuk ke direktori project install dependensi dengan composer.  
-`composer install`
+`composer install`  
+lalu ketik `code .` untuk langsung membuka vscode
 
 ### step 5
 
@@ -29,13 +30,15 @@ didalam file **.env** ubah baris `# CI_ENVIRONMENT = production`
 menjadi `CI_ENVIRONMENT = development` (hapus # dan ubah production menjadi development)
 
 ### step 6
-jalankan server dengan mengetikan di terminal/cmd/powershell:  
-`php spark serve` lalu buka di browser dengan mengetikan  
+
+jalankan server dengan mengetikan di terminal:  
+`php spark serve` lalu buka di browser dengan mengetikan
 > localhost:8080
 
 #### catatan
-untuk mengakses halaman beranda  
-> localhost:8080/showtes/home  
+
+untuk mengakses halaman beranda
+> localhost:8080/showtes/home
 
 ---
 [original readme](README-old.md)
