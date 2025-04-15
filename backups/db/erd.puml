@@ -1,0 +1,144 @@
+@startuml
+
+entity users {
+  **id <<PK>>**
+  --
+  email
+  password
+  role
+}
+
+entity password_reset {
+  **id <<PK>>**
+  --
+  user_id <<FK>>
+  ..
+  token
+  created_at
+  expires_at
+}
+
+entity producers {
+  **id <<PK>>**
+  --
+  user_id <<FK>>
+  ..
+  company_name
+  province
+  city
+}
+
+entity contacts {
+  **id <<PK>>**
+  --
+  producer_id <<FK>>
+  contact_type_id <<FK>>
+  ..
+  contact
+}
+
+entity contact_types {
+  **id <<PK>>**
+  --
+  contact_type
+}
+
+entity products {
+  **id <<PK>>**
+  --
+  producer_id <<FK>>
+  ..
+  name
+  price
+  description
+  image_path
+  created_at
+  status
+}
+
+entity product_categories {
+  **id <<PK>>**
+  --
+  product_id <<FK>>
+  category_id <<FK>>
+}
+
+entity categories {
+  **id <<PK>>**
+  --
+  category_name
+}
+
+entity carts {
+  **id <<PK>>**
+  --
+  distributor_id <<FK>>
+  product_id <<FK>>
+  ..
+  quantity
+}
+
+entity distributors {
+  **id <<PK>>**
+  --
+  user_id <<FK>>
+  ..
+  business_name
+}
+
+entity distributor_addresses {
+  **id <<PK>>**
+  --
+  distributor_id <<FK>>
+  ..
+  recipient_name
+  phone_number
+  address
+  postal_code
+}
+
+entity orders {
+  **id <<PK>>**
+  --
+  distributor_id <<FK>>
+  distributor_addresses_id <<FK>>
+  ..
+  total_price
+  status
+  payment
+  shipping
+  created_at
+}
+
+entity order_items {
+  **id <<PK>>**
+  --
+  order_id <<FK>>
+  product_id <<FK>>
+  ..
+  quantity
+  order_price
+}
+
+/' relation '/
+users ||--o{ password_reset
+users ||--|| producers
+users ||--|| distributors
+
+producers ||--o{ contacts
+contacts }o--|| contact_types
+
+products ||--|{ product_categories
+categories ||--o{ product_categories
+producers ||--o{ products
+
+distributors ||--o{ distributor_addresses
+distributors ||--o{ orders
+distributor_addresses ||--o{ orders
+orders ||--|{ order_items
+order_items }o--|| products
+
+distributors ||--o{ carts
+products ||--o{ carts
+
+@enduml
