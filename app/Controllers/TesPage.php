@@ -16,6 +16,14 @@ class TesPage extends BaseController
             return view('pages/register');
         } elseif ($param == "cart") {
             return view('pages/cart');
+        } elseif ($param == "profile") {
+            $data = [
+                "title" => "Profile",
+                "name" => "fajar ilham"
+            ];
+            return view('pages/profile', $data);
+        } elseif ($param == "profile-edit") {
+            return view('pages/profile_edit');
         }
 
         return "Halaman <b>$param</b> tidak ditemukan";

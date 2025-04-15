@@ -36,7 +36,6 @@
                                         </button>
                                     </div>
                                 </div>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +70,6 @@
                                         </button>
                                     </div>
                                 </div>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +104,6 @@
                                         </button>
                                     </div>
                                 </div>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -141,7 +138,6 @@
                                         </button>
                                     </div>
                                 </div>
-                                </p>
                             </div>
                         </div>
                     </div>
