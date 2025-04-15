@@ -2,10 +2,14 @@
 
 <?= $this->section('content'); ?>
 
-    <div class="container mt-xl-5 d-flex align-items-center justify-content-center" style="height: 70vh">
-        <div class="border col-5 rounded-4 p-4">
+    <div class="container mt-xl-5 d-flex align-items-center justify-content-center" style="height: 100vh">
+        <div class="border col-lg-5 col-md-8 col-9 rounded-4 p-4">
             <form class="m-auto" action="POST">
                 <h1 class="mb-3">Daftar</h1>
+                <div class="col-12 mb-3">
+                    <label class="form-label" for="email">Nama Bisnis</label>
+                    <input class="form-control" type="text" id="business_name" required>
+                </div>
                 <div class="col-12 mb-3">
                     <label class="form-label" for="email">Email</label>
                     <input class="form-control" type="email" id="email" required>
