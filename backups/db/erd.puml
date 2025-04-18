@@ -53,7 +53,7 @@ entity products {
   description
   image_path
   created_at
-  status
+  is_active
 }
 
 entity product_categories {
@@ -101,12 +101,11 @@ entity orders {
   **id <<PK>>**
   --
   distributor_id <<FK>>
-  distributor_addresses_id <<FK>>
+  distributor_address_id <<FK>>
   ..
   total_price
   status
   payment
-  shipping
   created_at
 }
 
