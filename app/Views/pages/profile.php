@@ -4,7 +4,7 @@
 
 <div class="container bg-body-tertiary mt-4">
     <h4 class="fw-bold">Profil</h4>
-    <p>Hi, <?= $name; ?></p>
+    <p>Hi, <?= session('name') ?></p>
     <div class="w-25 mb-3">
         <img src="/img/icon/user.png" class="w-50" alt="user icon">
     </div>
@@ -15,7 +15,7 @@
             <p class="mb-1">Email:</p>
         </div>
         <div class="col">
-            <p class="mb-1">PT Jualan Mainan</p>
+            <p class="mb-1"><?= $producerData['company_name'] ?></p>
             <p class="mb-1">ptjm@ngawur.com</p>
         </div>
     </div>
@@ -28,8 +28,8 @@
             <p class="mb-1">Kota:</p>
         </div>
         <div class="col">
-            <p class="mb-1">Jawa Tengah</p>
-            <p class="mb-1">Tegal</p>
+            <p class="mb-1"><?= $producerData['province'] ?></p>
+            <p class="mb-1"><?= $producerData['city'] ?></p>
         </div>
     </div>
 
@@ -46,6 +46,8 @@
     </div>
 
     <a href="profile-edit" class="btn btn-primary">Edit Profil</a>
+    <hr>
+    <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger">Keluar</a>
 </div>
 
 <?= $this->endSection('content'); ?>
