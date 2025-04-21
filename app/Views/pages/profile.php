@@ -15,8 +15,8 @@
             <p class="mb-1">Email:</p>
         </div>
         <div class="col">
-            <p class="mb-1"><?= $producerData['company_name'] ?></p>
-            <p class="mb-1">ptjm@ngawur.com</p>
+            <p class="mb-1"><?= session('name') ?></p>
+            <p class="mb-1"><?= session('email') ?></p>
         </div>
     </div>
 
@@ -36,15 +36,22 @@
     <!-- kontak -->
     <h5 class="mb-0">Kontak</h5>
     <div class="row g-2 mb-3">
+        <!-- tampilkan kontak -->
         <div class="col-auto">
-            <p class="mb-1">WhatsApp:</p>
-            <p class="mb-1"></p>
+            <!-- loop tipe kontak -->
+            <?php foreach ($contactData as $contact): ?>
+                <p class="mb-1"><?= $contact['contact_type'] ?>:</p>
+            <?php endforeach; ?>
         </div>
         <div class="col">
-            <p class="mb-1">081234567890</p>
+            <!-- loop kontak -->
+            <?php foreach ($contactData as $contact): ?>
+                <p class="mb-1"><?= $contact['contact'] ?>:</p>
+            <?php endforeach; ?>
         </div>
     </div>
 
+    <!-- tombol di bawah -->
     <a href="profile-edit" class="btn btn-primary">Edit Profil</a>
     <hr>
     <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger">Keluar</a>

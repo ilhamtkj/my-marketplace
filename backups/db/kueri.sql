@@ -41,6 +41,11 @@ CREATE TABLE password_reset
     FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
+ALTER TABLE password_reset
+    MODIFY id INT AUTO_INCREMENT;
+
+DESC password_reset;
+
 CREATE TABLE distributors
 (
     id            INT PRIMARY KEY,
@@ -48,6 +53,9 @@ CREATE TABLE distributors
     business_name VARCHAR(100) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users (id)
 );
+
+ALTER TABLE distributors
+    MODIFY id INT AUTO_INCREMENT;
 
 CREATE TABLE contacts
 (
@@ -59,6 +67,9 @@ CREATE TABLE contacts
     FOREIGN KEY (contact_type_id) REFERENCES contact_types (id)
 );
 
+ALTER TABLE contacts
+    MODIFY id INT AUTO_INCREMENT;
+
 CREATE TABLE contact_types
 (
     id           INT PRIMARY KEY,
@@ -66,6 +77,8 @@ CREATE TABLE contact_types
 );
 ALTER TABLE contact_types
     MODIFY contact_type VARCHAR(50) NOT NULL;
+ALTER TABLE contact_types
+    MODIFY id INT AUTO_INCREMENT;
 
 CREATE TABLE distributor_addresses
 (
@@ -78,6 +91,9 @@ CREATE TABLE distributor_addresses
     FOREIGN KEY (distributor_id) REFERENCES distributors (id)
 );
 
+ALTER TABLE distributor_addresses
+    MODIFY id INT AUTO_INCREMENT;
+
 CREATE TABLE products
 (
     id          INT PRIMARY KEY,
@@ -89,11 +105,17 @@ CREATE TABLE products
     created_at  TIMESTAMP      NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+ALTER TABLE products
+    MODIFY id INT AUTO_INCREMENT;
+
 CREATE TABLE categories
 (
     id            INT PRIMARY KEY,
     category_name VARCHAR(50) NOT NULL
 );
+
+ALTER TABLE categories
+    MODIFY id INT AUTO_INCREMENT;
 
 CREATE TABLE product_categories
 (
@@ -104,6 +126,9 @@ CREATE TABLE product_categories
     FOREIGN KEY (category_id) REFERENCES categories (id)
 );
 
+ALTER TABLE product_categories
+    MODIFY id INT AUTO_INCREMENT;
+
 CREATE TABLE carts
 (
     id             INT PRIMARY KEY,
@@ -113,6 +138,9 @@ CREATE TABLE carts
     FOREIGN KEY (distributor_id) REFERENCES distributors (id),
     FOREIGN KEY (product_id) REFERENCES products (id)
 );
+
+ALTER TABLE carts
+    MODIFY id INT AUTO_INCREMENT;
 
 CREATE TABLE orders
 (
@@ -127,6 +155,9 @@ CREATE TABLE orders
     FOREIGN KEY (distributor_address_id) REFERENCES distributor_addresses (id)
 );
 
+ALTER TABLE orders
+    MODIFY id INT AUTO_INCREMENT;
+
 CREATE TABLE order_items
 (
     id          INT PRIMARY KEY,
@@ -137,5 +168,8 @@ CREATE TABLE order_items
     FOREIGN KEY (order_id) REFERENCES orders (id),
     FOREIGN KEY (product_id) REFERENCES products (id)
 );
+
+ALTER TABLE order_items
+    MODIFY id INT AUTO_INCREMENT;
 
 SHOW TABLES;

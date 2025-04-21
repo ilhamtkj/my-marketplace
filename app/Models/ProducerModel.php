@@ -32,14 +32,14 @@ class ProducerModel extends Model
     }
 
     /**
-     * untuk mengambil semua kolom kecuali FK dan PK di tabel producers
-     * @param int $id role_id pada session atau producer id
-     * @return array company_name
+     * untuk mengambil kolom province dan city
+     * @param int $role_id role_id pada session atau producer id
+     * @return array province, city
      */
-    public function getProducerByUserId($id)
+    public function getProducerAddr($role_id)
     {
-        $result = $this->select('company_name, province, city')
-            ->where('user_id', $id)
+        $result = $this->select('province, city')
+            ->where('id', $role_id)
             ->first();
 
         // mengecek apakah province dan city null
