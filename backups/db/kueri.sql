@@ -104,9 +104,15 @@ CREATE TABLE products
     is_active   BOOLEAN        NOT NULL DEFAULT TRUE,
     created_at  TIMESTAMP      NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-
+DESC products;
 ALTER TABLE products
     MODIFY id INT AUTO_INCREMENT;
+ALTER TABLE products
+    ADD producer_id INT NOT NULL;
+ALTER TABLE products
+    ADD FOREIGN KEY (producer_id) REFERENCES producers (id);
+ALTER TABLE products
+    MODIFY producer_id INT NOT NULL AFTER id;
 
 CREATE TABLE categories
 (
@@ -173,3 +179,7 @@ ALTER TABLE order_items
     MODIFY id INT AUTO_INCREMENT;
 
 SHOW TABLES;
+
+# --------------------------------------------------------------------
+ALTER TABLE products
+    RENAME COLUMN image_path TO image_name;

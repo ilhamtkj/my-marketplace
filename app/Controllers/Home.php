@@ -2,11 +2,20 @@
 
 namespace App\Controllers;
 
+use App\Models\ProductModel;
+
 class Home extends BaseController
 {
     public function index(): string
     {
-        $data = ['tittle' => 'My-Marketplace'];
+        $productModel = new ProductModel();
+        $product = $productModel->getAllProduct();
+
+        $data = [
+            'tittle' => 'My-Marketplace',
+            'productData' => $product,
+        ];
+
         return view('pages/home', $data);
     }
 }
