@@ -32,66 +32,30 @@
 
     <!-- card -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-        <div class="col card-list">
-            <div class="card h-100">
-                <img src="/img/corvette.jpg" class="card-img-top object-fit-cover" style="height: 30vh"
-                    alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Mobil mobilan chevrolet corvette warna hitam</h5>
-                    <p class="card-text fw-bold">Rp200.0000</p>
-                    <p class="text-body">Kab. Tegal</p>
-                    <a class="stretched-link" href="detail"></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/corvette.jpg" class="card-img-top object-fit-cover" style="height: 30vh" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a short card.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/corvette.jpg" class="card-img-top object-fit-cover" style="height: 30vh" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/img/corvette.jpg" class="card-img-top object-fit-cover" style="height: 30vh" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
 
-        <?php foreach ($productData as $product): ?>
+        <?php
+        $limit = floor(count($productData) / 4) * 4;
+        for ($i = 0; $i < $limit; $i++): ?>
+
             <div class="col card-list">
                 <div class="card h-100">
-                    <img src="<?= product_image_url($product['image_name']) ?>" class="card-img-top object-fit-cover"
+                    <img src="<?= product_image_url($productData[$i]['image_name']) ?>" class="card-img-top object-fit-cover"
                         style="height: 30vh"
-                        alt="gambar <?= $product['name'] ?>">
+                        alt="gambar <?= $productData[$i]['name'] ?>">
                     <div class="card-body">
-                        <h5 class="card-title"><?= $product['name'] ?></h5>
-                        <p class="card-text fw-bold">Rp<?= number_format((float)$product['price'], 0, ',', '.') ?></p>
-                        <p class="text-body"><?= $product['city'] ?></p>
-                        <a class="stretched-link" href="detail"></a>
+                        <h5 class="card-title"><?= $productData[$i]['name'] ?></h5>
+                        <p class="card-text fw-bold">
+                            Rp<?= number_format((float)$productData[$i]['price'], 0, ',', '.') ?>
+                        </p>
+                        <p class="text-body"><?= $productData[$i]['city'] ?></p>
+                        <a class="stretched-link" href="<?= base_url('/detail/produk') . $productData[$i]['id'] ?>"></a>
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+
+        <?php endfor; ?>
 
     </div>
-
     <!-- end card -->
 
 </div>

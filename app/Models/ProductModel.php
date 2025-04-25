@@ -27,8 +27,16 @@ class ProductModel extends Model
             ->findAll();
     }
 
+    /**
+     * untuk mengambil info detail dari suatu produk
+     * @param int $id id dari sebuah produk
+     * @return array id, name, price, description, image_name, city
+     */
     public function getProductDetail($id)
     {
-        // kode
+        return $this->select('products.id, name, price, description, image_name, producers.city')
+            ->join('producers', 'products.producer_id = producers.id')
+            ->where('products.id', $id)
+            ->first();
     }
 }

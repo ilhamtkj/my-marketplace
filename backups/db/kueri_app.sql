@@ -112,3 +112,8 @@ VALUES ('1', 'Mobil mobilan 1', 100000, 'ini deskripsi', 'bunga (1).jpg'),
        ('1', 'Sabun mandi DIY 3', 30000, 'ini deskripsi', 'bunga (8).jpg'),
        ('1', 'Sabun mandi DIY 4', 40000, 'ini deskripsi', 'bunga (9).jpg'),
        ('1', 'Sabun mandi DIY 5', 50000, 'ini deskripsi', 'bunga (10).jpg');
+
+SELECT products.id, name, price, description, image_name, producers.city
+FROM products
+         JOIN producers ON products.producer_id = producers.id
+WHERE products.id = 1;
