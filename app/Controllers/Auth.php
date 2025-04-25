@@ -56,4 +56,14 @@ class Auth extends BaseController
         session()->destroy();
         return redirect()->to('/login');
     }
+
+    // belum selesai
+    public function register()
+    {
+        $data = [
+            'tittle' => 'Daftar'
+        ];
+
+        return view('pages/register', $data);
+    }
 }
