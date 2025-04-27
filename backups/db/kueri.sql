@@ -21,6 +21,9 @@ CREATE TABLE users
 ALTER TABLE users
     ADD COLUMN email VARCHAR(100) NOT NULL AFTER id;
 
+ALTER TABLE users
+    ADD UNIQUE (email);
+
 CREATE TABLE producers
 (
     id           INT PRIMARY KEY AUTO_INCREMENT,
@@ -30,6 +33,9 @@ CREATE TABLE producers
     city         VARCHAR(50),
     FOREIGN KEY (user_id) REFERENCES users (id)
 );
+
+ALTER TABLE producers
+    ADD UNIQUE (company_name);
 
 CREATE TABLE password_reset
 (
@@ -55,7 +61,13 @@ CREATE TABLE distributors
 );
 
 ALTER TABLE distributors
+    RENAME COLUMN business_name TO company_name;
+
+ALTER TABLE distributors
     MODIFY id INT AUTO_INCREMENT;
+
+ALTER TABLE distributors
+    ADD UNIQUE (company_name);
 
 CREATE TABLE contacts
 (

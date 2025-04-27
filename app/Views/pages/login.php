@@ -5,6 +5,8 @@
 <!-- jika error/gagal login -->
 <?php if (session()->getFlashdata('error')) : ?>
     <p class="text-white text-bg-danger text-center"><?= session()->getFlashdata('error') ?></p>
+<?php elseif (session()->getFlashdata('message')) : ?>
+    <p class="text-white text-bg-success text-center"><?= session()->getFlashdata('message') ?></p>
 <?php endif; ?>
 
 <!-- konten utama -->

@@ -9,8 +9,7 @@ class ProducerModel extends Model
     protected $table = 'producers';
     protected $primaryKey = 'id';
 
-    protected $useTimestamps = true;
-    protected $createdField = 'created_at';
+    protected $useTimestamps = false;
 
     protected $allowedFields = ['user_id', 'company_name', 'province', 'city'];
     protected $returnType = 'array';
@@ -47,5 +46,10 @@ class ProducerModel extends Model
         $result['city'] = $result['city'] ?? 'Belum diatur';
 
         return $result;
+    }
+
+    public function createProducer($data)
+    {
+        $this->insert($data);
     }
 }

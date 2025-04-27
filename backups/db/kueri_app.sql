@@ -117,3 +117,18 @@ SELECT products.id, name, price, description, image_name, producers.city
 FROM products
          JOIN producers ON products.producer_id = producers.id
 WHERE products.id = 1;
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+DESC users;
+
+SELECT *
+FROM users;
+
+SELECT *
+FROM producers;
+
+DESC producers;
+
+SELECT *
+FROM distributors;

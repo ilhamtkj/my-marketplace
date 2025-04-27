@@ -8,9 +8,6 @@ class UserModel extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
-    
-    protected $useTimestamps = true;
-    protected $createdField = 'created_at';
 
     protected $allowedFields = ['email', 'password', 'role'];
     protected $returnType = 'array';
@@ -18,5 +15,10 @@ class UserModel extends Model
     public function getUserByEmail($email)
     {
         return $this->where('email', $email)->first();
+    }
+
+    public function createUser($data)
+    {
+        return $this->insert($data);
     }
 }
