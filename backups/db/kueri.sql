@@ -195,3 +195,5 @@ SHOW TABLES;
 # --------------------------------------------------------------------
 ALTER TABLE products
     RENAME COLUMN image_path TO image_name;
+
+SHOW TABLES ;
