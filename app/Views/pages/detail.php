@@ -62,6 +62,8 @@
             <div class="col-lg-7">
                 <div class="card-body">
                     <h4 class="card-title"><?= $productData['name'] ?></h4>
+                    <p class="text-secondary mb-1"><i class="bi bi-tags"></i> Kategori</p>
+                    <p class="text-secondary mb-0">Terjual 1</p>
                     <p class="card-text fs-2 fw-bold">
                         Rp<?= number_format((float)$productData['price'], 0, ',', '.') ?>
                     </p>

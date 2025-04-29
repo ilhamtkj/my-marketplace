@@ -43,11 +43,12 @@
                         style="height: 30vh"
                         alt="gambar <?= $productData[$i]['name'] ?>">
                     <div class="card-body">
-                        <h5 class="card-title"><?= $productData[$i]['name'] ?></h5>
-                        <p class="card-text fw-bold">
+                        <h5 class="card-title mb-0"><?= $productData[$i]['name'] ?></h5>
+                        <p class="text-secondary mb-1"><i class="bi bi-tags"></i> Kategori</p>
+                        <p class="card-text fw-bold mb-0">
                             Rp<?= number_format((float)$productData[$i]['price'], 0, ',', '.') ?>
                         </p>
-                        <p class="text-body"><?= $productData[$i]['city'] ?></p>
+                        <p class="text-secondary mb-0">Terjual 1</p>
                         <a class="stretched-link" href="<?= base_url('/detail/produk') . $productData[$i]['id'] ?>"></a>
                     </div>
                 </div>

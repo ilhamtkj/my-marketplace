@@ -5,24 +5,22 @@
         <div class="row">
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Footer text</h5>
-
+                <h5 class="text-uppercase">Tentang Kami</h5>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
+                Kami adalah tim yang berdedikasi untuk menghubungkan produsen dan distributor secara langsung 
+                melalui teknologi. Marketplace ini dibangun dengan misi untuk mendukung pertumbuhan bisnis 
+                lokal dan mempermudah proses jual beli digital.
                 </p>
             </div>
             <!--Grid column-->
 
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Footer text</h5>
-
+                <h5 class="text-uppercase">Marketplace Kami</h5>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
+                    Marketplace kami menyediakan berbagai kategori produk dari penjual terpercaya
+                    di seluruh Indonesia. Kami memfasilitasi proses transaksi dengan sistem pembayaran aman,
+                    antarmuka ramah pengguna, dan dukungan pelanggan 24/7.
                 </p>
             </div>
             <!--Grid column-->
