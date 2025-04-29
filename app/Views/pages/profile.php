@@ -3,58 +3,79 @@
 <?= $this->section('content'); ?>
 
 <div class="container bg-body-tertiary mt-4">
-    <h4 class="fw-bold">Profil</h4>
-    <p>Hi, <?= session('name') ?></p>
-    <div class="w-25 mb-3">
-        <img src="/img/icon/user.png" class="w-50" alt="user icon">
-    </div>
-    <h5 class="mb-0">Data akun</h5>
-    <div class="row g-2 mb-3">
-        <div class="col-auto">
-            <p class="mb-1">Nama bisnis:</p>
-            <p class="mb-1">Email:</p>
-        </div>
-        <div class="col">
-            <p class="mb-1"><?= session('name') ?></p>
-            <p class="mb-1"><?= session('email') ?></p>
-        </div>
-    </div>
 
-    <!-- alamat-->
-    <h5 class="mb-0">Alamat</h5>
-    <div class="row g-2 mb-3">
-        <div class="col-auto">
-            <p class="mb-1">Provinsi:</p>
-            <p class="mb-1">Kota:</p>
-        </div>
-        <div class="col">
-            <p class="mb-1"><?= $producerData['province'] ?></p>
-            <p class="mb-1"><?= $producerData['city'] ?></p>
-        </div>
-    </div>
+    <div class="row">
+        <!-- left side -->
+        <div class="col-lg-8 mb-3">
+            <h4 class="fw-bold">Profil</h4>
+            <p>Hi, <?= session('name') ?></p>
+            <div class="w-25 mb-3">
+                <img src="/img/icon/user.png" class="w-50" alt="user icon">
+            </div>
+            <!-- akun -->
+            <h5 class="mb-0">Data akun</h5>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <p class="mb-0">Nama bisnis</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0"><?= session('name') ?></p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-4 col-md-2">
+                    <p class="mb-0">Email</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0"><?= session('email') ?></p>
+                </div>
+            </div>
+            <!-- alamat -->
+            <h5 class="mb-0">Alamat</h5>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <p class="mb-0">Provinsi</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0"><?= $producerData['province'] ?></p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-4 col-md-2">
+                    <p class="mb-0">Kota</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0"><?= $producerData['city'] ?></p>
+                </div>
+            </div>
+            <!-- kontak -->
+            <h5 class="mb-0">Kontak</h5>
 
-    <!-- kontak -->
-    <h5 class="mb-0">Kontak</h5>
-    <div class="row g-2 mb-3">
-        <!-- tampilkan kontak -->
-        <div class="col-auto">
-            <!-- loop tipe kontak -->
             <?php foreach ($contactData as $contact): ?>
-                <p class="mb-1"><?= $contact['contact_type'] ?>:</p>
+                <div class="row">
+                    <div class="col-4 col-md-2">
+                        <p class="mb-0"><?= $contact['contact_type'] ?></p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-0"><?= $contact['contact'] ?></p>
+                    </div>
+                </div>
             <?php endforeach; ?>
+
+            <a href="profile-edit" class="btn btn-primary mt-3">Edit Profil</a>
         </div>
-        <div class="col">
-            <!-- loop kontak -->
-            <?php foreach ($contactData as $contact): ?>
-                <p class="mb-1"><?= $contact['contact'] ?>:</p>
-            <?php endforeach; ?>
+
+        <!-- right side -->
+        <div class="col-lg-4 mb-3 border rounded">
+            <h4 class="fw-bold">Opsi lainnya</h4>
+            <a class="btn btn-primary w-100" href="">Kelola produk</a>
         </div>
     </div>
 
-    <!-- tombol di bawah -->
-    <a href="profile-edit" class="btn btn-primary">Edit Profil</a>
+    <!-- logout -->
     <hr>
     <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger">Keluar</a>
+
 </div>
 
 <?= $this->endSection('content'); ?>
