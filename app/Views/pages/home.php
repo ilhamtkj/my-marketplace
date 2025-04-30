@@ -8,13 +8,13 @@
     <div id="carouselExampleInterval" class="carousel slide carousel-fade my-4 shadow" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active carousel-item-home" data-bs-interval="5000">
-                <img src="/img/porsche.jpg" class="d-block w-100 rounded" alt="porsche">
+                <img src="<?= base_url('assets/img/porsche.jpg') ?>" class="d-block w-100 rounded" alt="porsche">
             </div>
             <div class="carousel-item carousel-item-home" data-bs-interval="5000">
-                <img src="/img/dodge.jpg" class="d-block w-100 rounded" alt="dodge">
+                <img src="<?= base_url('assets/img/dodge.jpg') ?>" class="d-block w-100 rounded" alt="dodge">
             </div>
             <div class="carousel-item carousel-item-home">
-                <img src="/img/ford.jpg" class="d-block w-100 rounded" alt="ford">
+                <img src="<?= base_url('assets/img/ford.jpg') ?>" class="d-block w-100 rounded" alt="ford">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"

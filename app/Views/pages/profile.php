@@ -10,7 +10,7 @@
             <h4 class="fw-bold">Profil</h4>
             <p>Hi, <?= session('name') ?></p>
             <div class="w-25 mb-3">
-                <img src="/img/icon/user.png" class="w-50" alt="user icon">
+                <img src="assets/img/icon/user.png" class="w-50" alt="user icon">
             </div>
             <!-- akun -->
             <h5 class="mb-0">Data akun</h5>

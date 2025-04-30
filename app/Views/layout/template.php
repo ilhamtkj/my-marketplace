@@ -12,7 +12,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- my css -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
     <!-- Font Awesome -->
     <script
             src="https://kit.fontawesome.com/c4e5df694e.js" crossorigin="anonymous">
