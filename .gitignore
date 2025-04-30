@@ -126,4 +126,4 @@ nb-configuration.xml
 /phpunit*.xml
 
 # third party
-!public/assets/vendor/
+!public/assets/sb-admin-2/vendor
