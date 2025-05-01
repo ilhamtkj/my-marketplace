@@ -20,5 +20,8 @@ $routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
 $routes->get('/detail/produk(:num)', 'Detail::productDetail/$1');
 $routes->get('/cart', 'Cart::index');
 
+// dashboard
+$routes->get('/dashboard', 'Dashboard::index');
+
 // testing view
 $routes->get('/showtes/(:any)', 'TesPage::showTes/$1');
