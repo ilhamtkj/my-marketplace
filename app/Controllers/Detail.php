@@ -9,7 +9,7 @@ class Detail extends BaseController
     public function index()
     {
         $data = [
-            'tittle' => 'Detail Produk',
+            'title' => 'Detail Produk',
         ];
 
         return view('pages/detail', $data);

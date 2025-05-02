@@ -17,7 +17,7 @@ class Profile extends BaseController
         $contact = $contactModel->getAllContact(session('role_id'));
 
         $data = [
-            'tittle' => 'Profil | My-Marketplace',
+            'title' => 'Profil | My-Marketplace',
             'producerData' => $producer,
             'contactData' => $contact,
         ];

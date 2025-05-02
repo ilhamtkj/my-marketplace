@@ -9,6 +9,6 @@
 3. Buka terminal atau Command Prompt, lalu navigasikan ke direktori proyek CI4 Anda.
 4. Jalankan BrowserSync langsung di terminal tanpa file konfigurasi dengan perintah berikut:
     ```bash
-    browser-sync start --proxy "http://localhost:8080" --files "./public/**/*.*, ./app/Views/**"
+    browser-sync start --proxy "http://localhost:8080" --files "./public/assets/**, ./app/Views/**"
     ```
 5. BrowserSync akan membuka browser secara otomatis dan memuat aplikasi Anda. Setiap perubahan pada file yang dipantau akan memicu reload otomatis.

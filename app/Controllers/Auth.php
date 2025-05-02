@@ -13,7 +13,7 @@ class Auth extends BaseController
 
     public function index()
     {
-        $data = ['tittle' => 'Masuk/Login | My-Marketplace'];
+        $data = ['title' => 'Masuk/Login | My-Marketplace'];
         return view('pages/login', $data);
     }
 
@@ -74,7 +74,7 @@ class Auth extends BaseController
     public function register()
     {
         $data = [
-            'tittle' => 'Daftar'
+            'title' => 'Daftar'
         ];
 
         return view('pages/register', $data);
