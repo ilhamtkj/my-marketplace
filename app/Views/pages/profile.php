@@ -68,7 +68,7 @@
         <!-- right side -->
         <div class="col-lg-4 mb-3 border rounded">
             <h4 class="fw-bold">Opsi lainnya</h4>
-            <a class="btn btn-primary w-100" href="">Kelola produk</a>
+            <a class="btn btn-primary w-100" href="<?= base_url('/dashboard') ?>">Kelola produk</a>
         </div>
     </div>
 

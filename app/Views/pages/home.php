@@ -39,7 +39,8 @@
 
             <div class="col card-list">
                 <div class="card h-100">
-                    <img src="<?= product_image_url($productData[$i]['image_name']) ?>" class="card-img-top object-fit-cover"
+                    <img src="<?= product_image_url($productData[$i]['image_name']) ?>"
+                        class="card-img-top object-fit-cover"
                         style="height: 30vh"
                         alt="gambar <?= $productData[$i]['name'] ?>">
                     <div class="card-body">

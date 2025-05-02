@@ -22,6 +22,7 @@ $routes->get('/cart', 'Cart::index');
 
 // dashboard
 $routes->get('/dashboard', 'Dashboard::index');
+$routes->get('/dashboard/manage-product', 'Dashboard::manageProduct');
 
 // testing view
 $routes->get('/showtes/(:any)', 'TesPage::showTes/$1');

@@ -118,6 +118,15 @@ FROM products
          JOIN producers ON products.producer_id = producers.id
 WHERE products.id = 1;
 
+SELECT products.id, image_name, name, category_name, price, sold_quantity, is_active
+FROM products
+         JOIN product_categories ON products.id = product_categories.product_id
+         JOIN categories ON product_categories.category_id = categories.id
+WHERE producer_id = 1;
+
+SELECT *
+FROM products;
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 DESC users;
