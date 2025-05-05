@@ -27,7 +27,7 @@
                         <th>No</th>
                         <th>Gambar</th>
                         <th>Nama</th>
-                        <th>Deskripsi</th>
+                        <th>Kategori</th>
                         <th>Harga</th>
                         <th>Terjual</th>
                         <th>Aktif</th>
@@ -61,15 +61,18 @@
                             </td>
                             <td><?= $product['name'] ?></td>
                             <td><?= $product['category_name'] ?></td>
-                            <td><?= $product['price'] ?></td>
                             <td>
                                 Rp<?= number_format((float)$product['price'], 0, ',', '.') ?>
                             </td>
+                            <td><?= $product['sold_quantity'] ?></td>
                             <td>
                                 <?= $product['is_active'] ? 'aktif' : 'tidak aktif' ?>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="">edit</a>
+                                <div class="d-flex flex-column gap-2">
+                                    <a class="btn btn-outline-primary" href="">edit</a>
+                                    <a class="btn btn-primary" href="">lihat</a>
+                                </div>
                             </td>
                         </tr>
                     <?php

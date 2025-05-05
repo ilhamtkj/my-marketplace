@@ -127,6 +127,14 @@ WHERE producer_id = 1;
 SELECT *
 FROM products;
 
+UPDATE products
+SET is_active = 0
+WHERE id = 1;
+
+UPDATE products
+SET name = 'Sabun mandi DIY warna ungu wangi lavender'
+WHERE id = 6;
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 DESC users;
