@@ -17,7 +17,7 @@ $routes->get('/logout', 'Auth::logout');
 $routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
 
 // belum selesai
-$routes->get('/detail/produk(:num)', 'Detail::productDetail/$1');
+$routes->get('/detail/produk(:num)', 'Product::productDetail/$1');
 $routes->get('/cart', 'Cart::index');
 
 // dashboard
