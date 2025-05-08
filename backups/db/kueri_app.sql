@@ -128,12 +128,11 @@ SELECT *
 FROM products;
 
 UPDATE products
-SET is_active = 0
-WHERE id = 1;
-
-UPDATE products
-SET name = 'Sabun mandi DIY warna ungu wangi lavender'
-WHERE id = 6;
+SET name        = 'Sabun DIY aroma peppermint',
+    price       = 100000,
+    description = 'Rasakan sensasi dingin dan menyegarkan setiap kali mandi dengan Sabun DIY Aroma Peppermint, sabun handmade berbahan dasar alami yang diperkaya dengan essential oil peppermint murni. Aroma mint yang kuat dan menyegarkan membantu membangkitkan semangat, merilekskan otot, dan memberikan efek menyegarkan pada kulit. Ideal untuk digunakan di pagi hari atau setelah aktivitas melelahkan, sabun ini cocok untuk semua jenis kulit dan menjadi pilihan tepat bagi Anda yang menginginkan pengalaman mandi yang segar dan menenangkan secara alami.',
+    image_name  = 'sabun-peppermint.jpg'
+WHERE id = 10;
 
 # ----------------------------------------------------------------------------------------------------------------------
 

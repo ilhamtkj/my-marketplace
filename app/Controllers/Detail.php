@@ -22,7 +22,7 @@ class Detail extends BaseController
         $tittle = $product['name'];
 
         $data = [
-            'tittle' => $tittle,
+            'title' => $tittle,
             'productData' => $product,
         ];
 
