@@ -70,7 +70,10 @@
                             </td>
                             <td>
                                 <div class="d-flex flex-column gap-2">
-                                    <a class="btn btn-outline-primary" href="">edit</a>
+                                    <a class="btn btn-outline-primary"
+                                        href="<?= base_url('/dashboard/product-edit') . $product['id'] ?>">
+                                        edit
+                                    </a>
                                     <a class="btn btn-primary"
                                         href="<?= base_url('/detail/produk') . $product['id'] ?>">
                                         lihat

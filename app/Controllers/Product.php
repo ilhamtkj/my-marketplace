@@ -28,4 +28,13 @@ class Product extends BaseController
 
         return view('pages/detail', $data);
     }
+
+    public function productEdit($id)
+    {
+        $data = [
+            'title' => 'Edit product'
+        ];
+
+        return view('pages/dashboard/product_edit', $data);
+    }
 }

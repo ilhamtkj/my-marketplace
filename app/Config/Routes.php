@@ -23,6 +23,7 @@ $routes->get('/cart', 'Cart::index');
 // dashboard
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/dashboard/manage-product', 'Dashboard::manageProduct');
+$routes->get('/dashboard/product-edit(:num)', 'Product::productEdit/$1');
 
 // testing view
 $routes->get('/showtes/(:any)', 'TesPage::showTes/$1');
