@@ -8,6 +8,8 @@ use App\Models\ProducerModel;
 
 class Profile extends BaseController
 {
+
+    // tidak dipakai
     public function index()
     {
         $producerModel = new ProducerModel();
@@ -23,6 +25,40 @@ class Profile extends BaseController
         ];
 
         return view('pages/profile', $data);
+    }
+
+    public function profileProducer()
+    {
+        $producerModel = new ProducerModel();
+        $contactModel = new ContactModel();
+
+        $producer = $producerModel->getProducerAddr(session('role_id'));
+        $contact = $contactModel->getAllContact(session('role_id'));
+
+        $data = [
+            'title' => 'Profil | My-Marketplace',
+            'producerData' => $producer,
+            'contactData' => $contact,
+        ];
+
+        return view('pages/profile_producer', $data);
+    }
+
+    public function profileDistributor()
+    {
+        $producerModel = new ProducerModel();
+        $contactModel = new ContactModel();
+
+        $producer = $producerModel->getProducerAddr(session('role_id'));
+        $contact = $contactModel->getAllContact(session('role_id'));
+
+        $data = [
+            'title' => 'Profil | My-Marketplace',
+            'producerData' => $producer,
+            'contactData' => $contact,
+        ];
+
+        return view('pages/profile_distributor', $data);
     }
 
     public function profileEditProducer()

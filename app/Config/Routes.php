@@ -15,7 +15,8 @@ $routes->post('/register/process', 'Auth::registerProcess');
 $routes->get('/logout', 'Auth::logout');
 
 // profile
-$routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
+$routes->get('/profile-producer', 'Profile::profileProducer', ['filter' => 'auth']);
+$routes->get('/profile-distributor', 'Profile::profileDistributor', ['filter' => 'auth']);
 $routes->get('/profile/profile-edit-producer', 'Profile::profileEditProducer');
 $routes->get('/profile/profile-edit-distributor', 'Profile::profileEditDistributor');;
 

@@ -22,7 +22,7 @@
         </a>
 
         <?php if (session()->get('logged_in')): ?>
-            <a class="btn btn-primary" href="<?= base_url('/profile') ?>">Profil Saya</a>
+            <a class="btn btn-primary" href="<?= base_url('/profile-') . session('role') ?>">Profil Saya</a>
         <?php else: ?>
             <a class="btn btn-primary" href="<?= base_url('/login') ?>">Masuk/daftar</a>
         <?php endif; ?>
