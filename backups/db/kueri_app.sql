@@ -71,6 +71,9 @@ VALUES ('Lain-lain'),
        ('Elektronik'),
        ('Makanan');
 
+INSERT INTO categories (category_name)
+VALUES ('Kesehatan');
+
 # -------------------------------------------------------------------------------------------------------------------
 DESC product_categories;
 
@@ -117,6 +120,22 @@ SELECT products.id, name, price, description, image_name, producers.city
 FROM products
          JOIN producers ON products.producer_id = producers.id
 WHERE products.id = 1;
+
+SELECT products.id, image_name, name, category_name, price, sold_quantity, is_active
+FROM products
+         JOIN product_categories ON products.id = product_categories.product_id
+         JOIN categories ON product_categories.category_id = categories.id
+WHERE producer_id = 1;
+
+UPDATE products
+SET name        = 'Sabun DIY aroma peppermint',
+    price       = 100000,
+    description = 'Rasakan sensasi dingin dan menyegarkan setiap kali mandi dengan Sabun DIY Aroma Peppermint, sabun handmade berbahan dasar alami yang diperkaya dengan essential oil peppermint murni. Aroma mint yang kuat dan menyegarkan membantu membangkitkan semangat, merilekskan otot, dan memberikan efek menyegarkan pada kulit. Ideal untuk digunakan di pagi hari atau setelah aktivitas melelahkan, sabun ini cocok untuk semua jenis kulit dan menjadi pilihan tepat bagi Anda yang menginginkan pengalaman mandi yang segar dan menenangkan secara alami.',
+    image_name  = 'sabun-peppermint.jpg'
+WHERE id = 10;
+
+SELECT *
+FROM products;
 
 # ----------------------------------------------------------------------------------------------------------------------
 

@@ -39,4 +39,18 @@ class ProductModel extends Model
             ->where('products.id', $id)
             ->first();
     }
+
+    /**
+     * untuk mengambil semua produk dari produsen tertentu
+     * @param int|string $role_id role_id diambil dari session
+     * @return array id, image_name, name, category_name, price, sold_quantity, is_active
+     */
+    public function getProductAdmin($role_id)
+    {
+        return $this->select('products.id, image_name, name, category_name, price, sold_quantity, is_active')
+                    ->join('product_categories', 'products.id = product_categories.product_id')
+                    ->join('categories', 'product_categories.category_id = categories.id')
+                    ->where('producer_id', $role_id)
+                    ->findAll();
+    }
 }

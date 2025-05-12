@@ -3,7 +3,7 @@
         <p class="mb-0">Kategori:</p>
         <a class="col text-secondary text-decoration-none" href="">Terlaris</a>
         <a class="col text-secondary text-decoration-none" href="">Terbaru</a>
-        <a class="col text-secondary text-decoration-none" href="">Elektronik</a>
+        <a class="col text-secondary text-decoration-none" href="">Makanan</a>
         <a class="col text-secondary text-decoration-none" href="">Mainan</a>
         <a class="col text-secondary text-decoration-none" href="">Furnitur</a>
     </div>

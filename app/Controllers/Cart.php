@@ -7,7 +7,7 @@ class Cart extends BaseController
     public function index()
     {
         $data = [
-            'tittle' => 'Keranjang belanja',
+            'title' => 'Keranjang belanja',
         ];
 
         return view('pages/cart', $data);

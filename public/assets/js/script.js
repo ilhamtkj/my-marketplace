@@ -1,0 +1,1 @@
+document.getElementById("editCategory").value = "1"

@@ -12,7 +12,7 @@ class Home extends BaseController
         $product = $productModel->getAllProduct();
 
         $data = [
-            'tittle' => 'My-Marketplace',
+            'title' => 'My-Marketplace',
             'productData' => $product,
         ];
 

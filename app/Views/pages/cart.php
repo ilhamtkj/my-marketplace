@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-2 d-flex justify-content-center align-items-center">
                             <div class="ratio ratio-1x1 w-75">
-                                <img src="/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
+                                <img src="assets/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
                             </div>
                         </div>
                         <div class="col-9">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-2 d-flex justify-content-center align-items-center">
                             <div class="ratio ratio-1x1 w-75">
-                                <img src="/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
+                                <img src="assets/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
                             </div>
                         </div>
                         <div class="col-9">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-2 d-flex justify-content-center align-items-center">
                             <div class="ratio ratio-1x1 w-75">
-                                <img src="/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
+                                <img src="assets/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
                             </div>
                         </div>
                         <div class="col-9">
@@ -118,7 +118,7 @@
                         </div>
                         <div class="col-2 d-flex justify-content-center align-items-center">
                             <div class="ratio ratio-1x1 w-75">
-                                <img src="/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
+                                <img src="assets/img/corvette.jpg" class="object-fit-cover rounded shadow" alt="">
                             </div>
                         </div>
                         <div class="col-9">

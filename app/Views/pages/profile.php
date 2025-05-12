@@ -10,7 +10,7 @@
             <h4 class="fw-bold">Profil</h4>
             <p>Hi, <?= session('name') ?></p>
             <div class="w-25 mb-3">
-                <img src="assets/img/icon/user.png" class="w-50" alt="user icon">
+                <img src="<?= base_url('assets/img/icon/user.png') ?>" class="w-50" alt="user icon">
             </div>
             <!-- akun -->
             <h5 class="mb-0">Data akun</h5>
@@ -68,7 +68,7 @@
         <!-- right side -->
         <div class="col-lg-4 mb-3 border rounded">
             <h4 class="fw-bold">Opsi lainnya</h4>
-            <a class="btn btn-primary w-100" href="">Kelola produk</a>
+            <a class="btn btn-primary w-100" href="<?= base_url('/dashboard') ?>">Kelola produk</a>
         </div>
     </div>
 

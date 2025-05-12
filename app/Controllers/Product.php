@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ProductModel;
 
-class Detail extends BaseController
+class Product extends BaseController
 {
     public function index()
     {
@@ -27,5 +27,14 @@ class Detail extends BaseController
         ];
 
         return view('pages/detail', $data);
+    }
+
+    public function productEdit($id)
+    {
+        $data = [
+            'title' => 'Edit product'
+        ];
+
+        return view('pages/dashboard/product_edit', $data);
     }
 }

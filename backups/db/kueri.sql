@@ -125,6 +125,8 @@ ALTER TABLE products
     ADD FOREIGN KEY (producer_id) REFERENCES producers (id);
 ALTER TABLE products
     MODIFY producer_id INT NOT NULL AFTER id;
+ALTER TABLE products
+    ADD COLUMN sold_quantity INT NOT NULL DEFAULT 0 AFTER image_name;
 
 CREATE TABLE categories
 (
@@ -196,4 +198,4 @@ SHOW TABLES;
 ALTER TABLE products
     RENAME COLUMN image_path TO image_name;
 
-SHOW TABLES ;
+SHOW TABLES;
