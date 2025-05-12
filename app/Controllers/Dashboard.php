@@ -8,8 +8,12 @@ class Dashboard extends BaseController
 {
     public function index()
     {
+        $productModel = new ProductModel();
+        $product = $productModel->getProductAdmin(session('role_id'));
+
         $data = [
-            'title' => 'Dashboard | My-Marketplace'
+            'title' => 'Dashboard | My-Marketplace',
+            'productData' => $product,
         ];
 
         return view('pages/dashboard/index', $data);
