@@ -25,9 +25,9 @@
                         val style="height: 20vh;">deskripsi lama</textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="category">Kategori</label>
-                    <select class="form-select" name="category" id="category">
-                        <option value="1" selected>Lain-lain</option>
+                    <label for="editCategory">Kategori</label>
+                    <select class="form-select" name="category" id="editCategory">
+                        <option value="1">Lain-lain</option>
                         <option value="2">opsi 2</option>
                         <option value="3">opsi 3</option>
                         <option value="4">opsi 4</option>
