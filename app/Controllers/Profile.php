@@ -24,4 +24,22 @@ class Profile extends BaseController
 
         return view('pages/profile', $data);
     }
+
+    public function profileEditProducer()
+    {
+        $data = [
+            'title' => 'Edit profile'
+        ];
+
+        return view('pages/profile_edit_producer', $data);
+    }
+
+    public function profileEditDistributor()
+    {
+        $data = [
+            'title' => 'Edit profile'
+        ];
+
+        return view('pages/profile_edit_distributor', $data);
+    }
 }

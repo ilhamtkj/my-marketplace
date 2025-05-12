@@ -14,10 +14,15 @@ $routes->get('/register', 'Auth::register');
 $routes->post('/register/process', 'Auth::registerProcess');
 $routes->get('/logout', 'Auth::logout');
 
+// profile
 $routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
+$routes->get('/profile/profile-edit-producer', 'Profile::profileEditProducer');
+$routes->get('/profile/profile-edit-distributor', 'Profile::profileEditDistributor');;
+
+// cart
+$routes->get('/detail/produk(:num)', 'Product::productDetail/$1');
 
 // belum selesai
-$routes->get('/detail/produk(:num)', 'Product::productDetail/$1');
 $routes->get('/cart', 'Cart::index');
 
 // dashboard

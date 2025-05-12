@@ -62,7 +62,7 @@
                 </div>
             <?php endforeach; ?>
 
-            <a href="profile-edit" class="btn btn-primary mt-3">Edit Profil</a>
+            <a href="/profile/profile-edit-<?= session('role') ?>" class="btn btn-primary mt-3">Edit Profil</a>
         </div>
 
         <!-- right side -->
