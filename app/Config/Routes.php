@@ -17,11 +17,14 @@ $routes->get('/logout', 'Auth::logout');
 // profile
 $routes->get('/profile-producer', 'Profile::profileProducer', ['filter' => 'auth']);
 $routes->get('/profile-distributor', 'Profile::profileDistributor', ['filter' => 'auth']);
-$routes->get('/profile/profile-edit-producer', 'Profile::profileEditProducer');
-$routes->get('/profile/profile-edit-distributor', 'Profile::profileEditDistributor');;
+$routes->get('/profile/profile-edit-producer', 'Profile::profileEditProducer', ['filter' => 'auth']);
+$routes->get('/profile/profile-edit-distributor', 'Profile::profileEditDistributor', ['filter' => 'auth']);;;
 
 // cart
 $routes->get('/detail/produk(:num)', 'Product::productDetail/$1');
+
+// order
+$routes->get('/order-list', 'Order::orderList', ['filter' => 'auth']);
 
 // belum selesai
 $routes->get('/cart', 'Cart::index');

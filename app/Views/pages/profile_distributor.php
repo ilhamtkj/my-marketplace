@@ -3,7 +3,6 @@
 <?= $this->section('content'); ?>
 
 <div class="container bg-body-tertiary mt-4">
-dist
     <div class="row">
         <!-- left side -->
         <div class="col-lg-8 mb-3">
@@ -34,33 +33,36 @@ dist
             <h5 class="mb-0">Alamat</h5>
             <div class="row">
                 <div class="col-4 col-md-2">
-                    <p class="mb-0">Provinsi</p>
+                    <p class="mb-0">Nama penerima</p>
                 </div>
                 <div class="col">
-                    <p class="mb-0"><?= $producerData['province'] ?></p>
+                    <p class="mb-0">ilham</p>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row">
                 <div class="col-4 col-md-2">
-                    <p class="mb-0">Kota</p>
+                    <p class="mb-0">Telepon</p>
                 </div>
                 <div class="col">
-                    <p class="mb-0"><?= $producerData['city'] ?></p>
+                    <p class="mb-0">081234567890</p>
                 </div>
             </div>
-            <!-- kontak -->
-            <h5 class="mb-0">Kontak</h5>
-
-            <?php foreach ($contactData as $contact): ?>
-                <div class="row">
-                    <div class="col-4 col-md-2">
-                        <p class="mb-0"><?= $contact['contact_type'] ?></p>
-                    </div>
-                    <div class="col">
-                        <p class="mb-0"><?= $contact['contact'] ?></p>
-                    </div>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <p class="mb-0">Alamat lengkap</p>
                 </div>
-            <?php endforeach; ?>
+                <div class="col">
+                    <p class="mb-0">Pendrikan Kidul, Semarang Tengah, Kota Semarang, Jawa Tengah</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <p class="mb-0">Kode pos</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0">52131</p>
+                </div>
+            </div>
 
             <a href="/profile/profile-edit-<?= session('role') ?>" class="btn btn-primary mt-3">Edit Profil</a>
         </div>
@@ -68,7 +70,8 @@ dist
         <!-- right side -->
         <div class="col-lg-4 mb-3 border rounded">
             <h4 class="fw-bold">Opsi lainnya</h4>
-            <a class="btn btn-primary w-100" href="<?= base_url('/dashboard') ?>">Kelola produk</a>
+            <a class="btn btn-primary w-100 mb-3" href="<?= base_url('/dashboard') ?>">Kelola produk</a>
+            <a class="btn btn-primary w-100 mb-3" href="<?= base_url('/order-list') ?>">Daftar pesanan</a>
         </div>
     </div>
 
